@@ -81,7 +81,7 @@ image_list = []
 
 for file in files:
     
-    image_tag = image_dict(file)
+    image_tag = image_dict( os.path.abspath(file) )
 
     tree = ET.parse( os.path.splitext(file)[0] + '.xml'  )
     root = tree.getroot()
